@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container">
-  <div class="m-5">
+<div class="container" style="width: 600px; box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%); border-radius: 15px; ">
+  <div class="my-5 p-5">
     <h1 class="text-center">리뷰 쓰기</h1>
     <form action="create">
       <div class="mb-3">
@@ -14,13 +14,12 @@
           <label for="formFile" class="form-label">사진 파일 올리기</label>
           <input class="form-control" type="file" id="formFile">
         </div>
-        <div class="d-grid gap-2">
-          <button class="btn btn-success mt-4" type="submit">리뷰 쓰기</button>
-          <button type="button" class="btn btn-outline-success"
+        <div class="mt-4 text-end">
+          <button class="btn btn-secondary" type="submit">리뷰 작성</button>
+          <button type="button" class="btn btn-outline-secondary"
             onclick="location.href='{% url 'review:index' %}' ">취소</button>
         </div>
       </div>
     </form>
   </div>
-</div>
-{% endblock %}
+  {% endblock %}
